@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book and Assignment Management System</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: #202124;
+            background-color: #f1f3f4;
+        }
+        .container {
+            width: 80%;
+            max-width: 1440px;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #fff;
+            color: #202124;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+        header a {
+            color: #202124;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        header a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #DB4437;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+        header a:hover::after {
+            transform: scaleX(1);
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+            color: #1a73e8;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .highlight, header .current a {
+            color: #1a73e8;
+        }
+        #showcase {
+            background: #1a73e8;
+            color: #ffffff;
+            overflow: hidden;
+
+        }
+        #showcase .container {
+            display: flex;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        #showcase .bible-image {
+            flex: 1;
+            display: flex;
+            text-align: center;
+            align-items: center;
+
+        }
+        #showcase .bible-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        #showcase .slogan {
+            flex: 2;
+            padding-left: 120px;
+        }
+        #showcase h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        #showcase p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: #fff;
+            color: #1a73e8;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn:hover {
+            background: #f1f3f4;
+            color: #1a73e8;
+        }
+
+        #boxes {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            padding: 16px 0;
+        }
+        #boxes .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        #boxes .box {
+            flex-basis: calc(30% - 20px);
+            padding: 20px;
+            text-align: center;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+            margin-bottom: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 20px;
+        }
+        #boxes .box h3 {
+            color: #1a73e8;
+            margin-bottom: 0px;
+        }
+        footer {
+            padding: 20px;
+            margin-top: 0px;
+            color: #5f6368;
+            background-color: #fff;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            #boxes .box {
+                flex-basis: 100%;
+            }
+        } 
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Book & Assignment Manager</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <div class="bible-image">
+                <svg width="300" height="400" viewBox="0 0 374 538" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="300" height="400" fill="url(#pattern0_35_3)"/>
+                    <defs>
+                    <pattern id="pattern0_35_3" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_35_3" transform="scale(0.00534759 0.00371747)"/>
+                    </pattern>
+                    <image id="image0_35_3" width="187" height="269" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAAENCAMAAABgquSEAAAAh1BMVEUhISEiIiIAAAB7e3sFBQUNDQ19fX0eHh4lJSX///8bGxsoKCgZGRkXFxcTExMUFBTv7++1tbXp6emFhYW7u7umpqbLy8vZ2dlkZGTS0tL19fXDw8MyMjLn5+dgYGCgoKA8PDyLi4utra1vb2+WlpZYWFhPT0+ampo6OjpDQ0NsbGxhYWFJSUlJdlx9AAAWX0lEQVR4nO2dC3ObuhKAkbCQkHi/BAiMeRvq///77gqnOWlvp2liUzcz3jOnsY2Aj2W1WomVMBrzK4plWX1nmBgfvqAQgntgNwx0FbYJ+hrCDq0RE4GMq9BNjK8hyIsN6/BKe72gRwJ9QBCxgP2r0P4o6GB+WXaDPNkfIk/2x8iT/TEC7DF5sv91+eI282R/gDzZHyNP9sfIk/0x8mR/jDzZHyNP9sfIk/0x8mR/jDzZHyNP9sfI32KnOzxO+VvsbIenWLuyg65fn8J9Fb07Lw87GRPMePkgvgY7wZtwjD1GDxhTrr8ekLjvaXZgZyTNkrIolEhK8+BaZedWKlJZ71J2XyXtoPfqgrFc8DeOJOUVbibXNQvMFl7599X8/dkRBUORExfOIoWPvWSkh7jAGCH+z+sd2BGWI2fiJIdhbrPJoW09ztxAjN/zRDuwU8YFsPuIngtBK5qM7iGWXgs/3NlP7uIjGQabMfhZCsRJeBG+VWBKEUP/ut7BajS7x3hVHBDzk8nDscTGBHq/73l2Yad5kILtzHXMvDwIHb8LmrDxjH/e3gFdVNWZCuPMKsHhI4fvpxNj91b8PvHMNYcIUCni3BCCM5fChwfUVQoRFWIG+Gf4dI0HNRWQMGZcwy1EKRiJNvXNmSDtbqhwDMEFEgyco4DQZvPvCI5AEf2eYgQH2vak+nq3gyN6vT303djzD9gRBdVByyL0UeEfjaudOCXEdwQV+ooMrq8KyvhMcA72AieGS7u2o+x6WbA3BGkACXsAsGDwBw7HoRBcGodj6/LgYuHwwhf83aj5fXZ6WsBcKyDh1VKJ6qyVSplHpnYwT8SBKkiFWM7V6QzGcYayjHFgrPRe27VzsVy/+Iw5jJ6hzALHECeoC+eKO1BBEIci5xPbbgQUFedKiNM79vA++yFWZaRGT3DjEtaBbMF2DIpXGSSqtrOVgvJRrspSWdw4d0FQH13QH+qjUq3asSA2dVFQ14GaPAFe3pRR3QnKp6SOorpMLqBxempkUKYnbZQ8D+EgZRCU4vd5d++zO96pDkZoW8BaD6EdY7Be5KZBLHxfrHUQVxyirEMZVIQKFw9lwRxtM0agOL9aLsWd3fMpkBXYDTqYtsJwDZx0Ze6YQXYWHHHc2g1Gm5eiJLPN02TKdxriP7B3WslodMFXGIaX2vEB7JG35RFT5iBXSNsisAWXJZgxVAec2q0PZCSuieAvFRLYcw8P9kBAsV4O7HAXDRyW3zBu7J6A4eMV9rueEPHM7n2fNOz3TvVP2IWMjvqwaGPHcIcXO9bACBHjaJcL+BQclBXVtdpZgsCBCoeKlbvfDwzs34iflxkGZGBPtIY1e+45F7shsKef27H/4mC03qHCV8Iwfof2B3kcvJIBsOtCpLNjcCK4iISx+TtmYGV3Pqit1OzgSKgDiicUxzXzxYuX2/TuorMMNbO7ArtxZR8RnWyTgN9ygd29lkaOgt/A/7Lfcv0JO8SywdHVFFSzgws82sm1FoHL5qZdHxy2scN38JZTUAgP1wN+7Wls7NSf6lXTOW/YQe+jDTHnxt5e2Q3Ktd71dVP0u8r6B+wO6H06+Jz7lDRgLMKPy/BFRcJh59K+eC/suqGCPl8ZQ/Ql/utpaPYR41Rt9+Et+4LxHFKdD+u9soP/VXaPCfR2362r77HTqrBVtomS+gbTzp5fVAT+uorsb1f2bSQDPLtXRyRbGX9tXRAO7bBJg3xDfsNuJ3MTjeC5qCD/sSNgT62+TcXvmyddV99ll2XXgKRzk9mWR53EbvzvG5FRgw9BV71rDcKpW7hWQ8frb9nnsIwsbe/8jd7TFJz86oLb1zZzrasGdTM7k7L8E/Z3/Az0IYLpmiMPbs50DBbaKdmYtA8Tmp1e2a/iXCK79V73Rxs72EwebP6KvtH7iMkaRd8cqr1P671UTg98pGB5/E7I/EfsBfgZbQ6IN7bpGs5gd6/srKrBSf7AzkURrO5P7LknsGmX4ODf6B1qsMCzrVwmDq/s4Hmhrnq0mt4ZVvhDvR89CGahtgK7j3BcFq+tNT+XEZBg+z920FuQ/8wOV0/hQCP50c9A7YEGYeFv9E452Ix5AB9R3Ytdz0dwNbvhnAL78v1+er0dYs7+YwdUrsrj/7FDfIYTUD9H+ZWdAvvRgQ8SSjPywg61BFHNLpDj/h/LR9kdrS5fe1sK7DFHFBighUR6OIO5nX102EvbxHRcD1ebBN9+OK9mdzgi8OdAr3qHag3RUc70gAgY3VXv0E3RAbK2GR/Cz3dG0t5nR+QE8YxmZ+C6IZ6BeOoUlCvW7I5zqWcMAa9mRw7zLO0baBKMzk/sORGGk5WEsys7M7iXlEcCYbzMoFXzvkG0Y3DnZB4Y2tpV5JrejewGP8ly2noIDBhaXOnGtIx67HCIMWVSQVAssA2+iIClexwcnorA5b+2LFxoYyGEXKL2UHEjh7um2zE4Wk8IH2uTwqGHUmGPY2sgDgH2A8GLwu/FM++xe2tQmrrRhHBa2Qm0+gyC+rJM4mPfBApiQOHyxbbrIW6TAHPqL7IcdJD/cgCIHGQp23iIUuh66MCsgJ6FcM+FXVhxW7eEnX2e2GUXt0MNFaOSNhRv4I7eyM7HJkmSWPf4Dk0SZvMC1yDI1EFnoVbrQXek2RQmKlNZUbTQvatSlSTNxauu0Qj06oYMNidq3YLPPlFht0Kw3yq9hzqCeRiiD+EbfE1OTHQq1A15Mvq/A/sje9ej5zrwBnvXn3R/lAkfY67/130SiEDwd4HG1d92cJHLNnNFhvOyjWxD8FtZT0d2248HqrsbzH09AMSm38uLW21G6AEBSrfOMkTq0EWGPsE2gKHHCeAm0O0X7WSQ9jNwcvi8dZ02vesQB1oxpm1HB2PiOoyg4wn4h+sRCL0d/BaogW8DCFAW+tvCuDkm+Enoe2H1X5PPjC39ncex789wez4bfow82R8i6OuyU/Zkf4Q82R8kX7iufmkf+WR/kDzZfyf3fhL/n+zMTrl756SZN7IvO3RxxRfVO3Rjq3f6nLfInuyI8kt94myvXuJ+7PpBOA6LTg9cfn9YeV/ZkZ3xw5DF2YyRwe+dGrnJbuwMcXfM0qDJxm19mx3OsSO7fy7mtmkHeSLGLmM6u+Rc6f8or2RctfZ8iuuTQ3XuyX3Psg+7fgpF/SpJybc8zHO/KYTYxgHve5pd2BlDDpmyBE9zbchhxKkcPZ0ncWfV75CXyjjnrJfhOkZFdpSF7PtO9gavtnymO8oOeqdCiEGGiTVkYWsPXTa0SVgPiyO+QG4n9dIgVF2Z+maikv7Q2PCnbvQQ/l3Ps4uPpFORzUES2GkcWWlgq2BWMnfpnSd97JRTG6osDgc77mwVg9lYWRbqrK37nmcXP8PpqMJwGOUa2HVeT7NKVO4gcWf4PXLIdQpklsayaOe8s9I2K8whq/j1ic0dZR92gzfJUZlJHZ9kWZuJ1aU6M/GfZ9/o+VKv8VgH5hzYdt+v9eRT42vkMhsIFw1uL2NmZ8t5gIZ1SyD4GuyMWKqyGtmUcz1YZzUcvsjcLEM/pLvIS2uFlt2mbVtFl/tHYjvG7zTJRdq3UWvN4qh26Tjtxo7DGEfFNJ2yAPcJ4TtMpLwH+zb5h6Mf8dCa6pTVabYV7qy3o2NsS41ngt/aVN2BXefxI2GIH6de8UuBBztd5jLG2eWth+FsGzbg9Fa3cwd24Quiszl8PePzVVhV8Dy7hIsaHVnRNynVOi+RckGETsS5Re7Azo1LzqjDBHLeGA3HaqXfpJ2N51Hxt8mxDIxLYCOf+I3DNndgpzQvsxYfvs8+uWoY4W5GhZR24Q/hlpb3Er3r3F8HW1lkOo/XuyCm6lURn7HWO6LXMTyEm26pTRnJS5jq3KmXbBroEXqLKZWl+t9nJf0VdmocsyLsMjlf8AGiRcSu+eZt2MpelSoOG2BH2/QmzjG+NIVslEx6cuN8p3v4GWIWczfySytlOp097LiICkbMJMvkKoskjIkDnogfMKnGVGbDxcnnMDPdG0ec7sDOeJoeZZQuGJtNJFUYXzA+uM63rBjiJE+1hj0fHy5Nl9RRs2IsuroY0w7Th9ZVivScpuJ0UYkdKGsixslqQiXrImnCLhxlWYyg+E5JWWddGp8NMplFVKpwnOTiVTc1tjezM1IVEOSGUxCVQVQM5+lUOcc2VCppijEp1QjGnahuXit2GlFcRHYZBccwxHFRuY9j19l3hyXLqjVSSRBFSdrmfSDNWSxjmqSqS9ciT5OiS4bjRbSWDMxj3CRBEISqts6JXMgtZnMTu05ljLMi7cM2K6My6oO6ndqg6YesKJsYF3bXg+Zxm9pKB5TlsFjQl6rtKJBzYzXgWN0bRrdvtBkyBGkQR6M2GCmnrDbrfpmLIkgaFcxRUMZ9EAxBN4cRdL0Xsx4KtdR1VJbBsR7KoWyJ+PRg2Y02I/AgE9WfyqC07cAuVRoEchiCYzYnSRrHSdDGcZolTdbXaVsHZZqVti5blqc+7OTA/c8PUt6md/DaeCxUZQRlFg9BWQzgYup0HMZlSOM5TdZg7dK5b9plHPK5rqVsiyBK48wO3IsqxoMjPj97/lY/w8DpyRh3AU6yXBYm1Xm8y2TGHbjIQlllr2QXpkPbjxPGDsbfZG2qEEch7usJIpobhldvZNeTgN2lOB/l0pbd8cj58m1tFShYJVkn284OZ5mqBIKyOmn740kYl2MXtBd5rIpJT129oWm9RzzjhuEkgybneGwUNEFDvpwZx2smw7UfQwm9PyLOUz93WZ3NIyZjGsljkxzemSf5F9iZY2Zdc2FslTLJF4E9onOqSRzWQUayGtg9Dp0qj5BqgRCh7g06pSnY1+PZDWctMtVkWZI7WGMbW1q53yaFbl1V0c2Y6j6S7tR62FiTQkGDla3+4/urVOTKVHV8vroMtj1wguiySbq4tS0Laq1OyKcvyfHc809mkJnqX2Bn7mpDSHP4cfSI4Ub1RWSW2Zqk+Mc9IIiPZWneer/v0ucb4xNmP3XgEE6zqq2buj3/HztYkFdZx39gnIAhvvVV0Q/PZCjovTIlRDgI+nz/NxpJ2e2rzt9F72LrR//IziEu9sJAFspPU/xzrIvYHZ613qPP9+ufD2lLsqCwCtR2v9LxTc3SJvuNpfpJfw7lLLtqzTznVyVuHaLcL4+DquUYxbVVm6fM+GUP49bT7saOREFXu8lm2zwU1X0faL/Ibuz8VODYrkdpW7g47ZLwthu7vxR4hY5pFKxYnnc4wZ42cy4waYo+SwUulq+ld2dUOO6yCEJiHN7chP5S9vOR5ozXcCjabsVD/LX07nUtzkp5DG2JzXCX187sxk5C85AFZUyDDPfXNVvuford2JPeCBNbhkmH8sS7sYv061Ps5t+T/FKntV2rcpwSeu+8Hy17sdMqWeKiq4M6LGKRfamcWrpkYmzrugzqeHSKaY+gYC92PklyKsqgLINiwnLcw0nuxe7kyg3LMgoiOwgP2fqrIPhW2YUdQU+77aiMorK2g1JWaYN3mPaxE7vAKnUGCTYD+LFoij0c/G56j5oxbSXovYjDfKjx+3t9WPbK/eF1vGSFpezElOEUyz1mTezE7k3yONhFYNqmXdjDWI/k7ufYiR0dzCzPiqXu7LmeVBZn1q0DeL+QnfRO0q4pgjity6iJo6Kbw9seR/76JHvkA3NKVBpKvQZkEICLL5Mh8d7f76Oyi94FOocqBXJw8BE0rXaqwkrQe8cFu+SlCi9XtZqbQD+MlEEzZHWy+nePgvfJf+d9IVVh1lZUSrM2ZSKznn8Jdsa8pshyK7WL1m6UHbbHouig+3HnLMl9/AyWWWPbdZjm2THtarscihpTIe4bke3AzoU7ZgqM/TiZhcysyxTUqcp6n985J3iP9bA5NYtGJm1h202RlmA5SnaF5d27ddphfhMcjSyJglism6Ql17AZuyS5EPTvzzvQi1ZVBHey1U+H4xqMJZYd9t5bterjsg87uMnDWqwHswnSGOeyP4i7vzFgxzGOCl9qU8x2yqz64htfanzGQe65iM3GMovTDnM9tOw3hs2onxdD1hQ9Me49K+sqe841N1yVRmnioi83T14ffJQXOe22QMGu7AyHWYd3Gc/TsiM7pZRP9vL+2v+flR3Zobayyqycr6h3pNeXdndc9XD39Wf2cY+b/MFa3jfKrnp/bw31f1ae7I+R/e19P3mu0fUYebI/Rp7sj5En+2Pkyf4YebI/Rp7sj5En+2Pkyf4YebI/Rp7sj5En+2Pkyf4YebI/Rp7sj5En+2Pkyf4YebI/Rp7sj5En+2Pkyf4YebI/Rp7sj5En+2PkyX4V9t6Lme8s92S//8yC38vH2fX7y/VSCVxPwmL6NeUGE3rxJKS/vr4UW/9F13ey062cLg7F9DwhRrdV1LetXL8ITx/RYB/NAv04O3Nc6hDuE73GmeERRA3X4zrHHX41tsXdNm79pgzHhQ0Hn1HD86CYSz29apQD5RlyDhQRH8iJp4vqmXTOx2zuE+zHcRn7Kj+KqkJk6itxWNuLS3l1zAXlE+KiOsONWAQ6jv3IeZsjwdbRQGM+HfN4Ed/yM9ykcaiqfBI+amPHdY6cizGvPvT+ko+z00vmzTFpZi8PfXFSXKh+6SxQYp9SA9ejR5cQMyedSKx6kw99M1GWtgaeZ67aeMXRnMT42MWLG664T8Y8HL128LwpIcZHqszH2bmbxBbBTYwv9YyrEKcxcc8Ld4zj7Ht90rh8CXpyKo+ONWNO5yMViC8ZdpIKK84dLPtjgeMEs0NzEQoM56JwL2d8TnzGP1DhP+FnkGw8gecBj2vYnEO9YIVTTRWlS0pEUnUUHYcEz2o99Co2/SmZPMFJEo8NxlmrBJZtYnKadoyn0xgS5vgFbkfVnhL8oTdpfELvrEhM7A0t2DpOhhCr0XDXrPLEZSZTt4Y5Ns0mbkyT9Ek+cn/KFoT4JUsRxVnfEiy7okIVaQbcTEvoOYxIHOcka0PvQxnnn2FXJItx2uKpJ24X4jap6NSQyplaHvfuURHLHIMzqNlKSX+KSdcTirykIRxnC2uxPFoKd9W3BDej05m8GlrNXhXJx1Zg+ITN5Onl3F2Gllom+LXWgToapwtnxtgs4QIVNZ9zuqI1PcfdMLChbSq9fvFx5MbSDalphCZt436ez1VqIdLE7cBEmjNyGj7E8RkfWUHT4gvBqX57hMOg6REV4ojh7siYAB9dMeZCpasq/RIPxs8EWh1Eqatf21chV3DhQqUUQi+NzIV3Ei5D0Lyxj84M+YSPpODFEXUrR69TAefV7/KCKuYccx+uo3KQcIVuJGEDBTiGdBndxDLKuC9ccCXMEEJfJpSDYwnXgGuAcuhjLeun4hmqYwA9Yx8hH11nGcJVeFe9vc4ig0sA58gQ1+8u2Zb3rF5KC11QhwXbuz4Mza2Dio++IvdT7EhQcV3clwqhIxFDxyjop9d9Ao+L9JKeYvuVUi7Q9r415HCDb9MT9TH0u2S4Iajx4akhn5p3sAVcWxtyPbvxou2f7jnaZn5uFrUV0UGZ8fKmjGsLtO1FX0K2v8P+j8iT/THynKvyGPGsr8vux8Au/nIH/z6CCOhdz+xFb+S/ra9f0f/Jr3/98+03i34HoNHjAyaHLyeY4NXoetOC/17F+sWnD8sNu/7xGdbkf6vTuNhAfj8eAAAAAElFTkSuQmCC"/>
+                    </defs>
+                </svg>                             
+            </div>
+            <div class="slogan">
+                <h1>Spiritual Learning Journey</h1>
+                <p>Track your Bible studies, assignments, and progress all in one place.</p>
+                <a href="#" class="btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <h3>Books</h3>
+            </div>
+            <div class="box">
+                <h3>Assignments</h3>
+            </div>
+            <div class="box">
+                <h3>Progress</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Book & Assignment Management System, Copyright &copy; 2024</p>
+    </footer>
+</body>
+</html>
